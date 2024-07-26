@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name" :"Jira Extention for current tasks",
+  "description": "Load JIRA task which is active to do ",
+  "version": "1.0.0",
+  "icons": {
+    "16": "entrata.png",
+    "32": "entrata.png",
+    "48": "entrata.png",
+    "128": "entrata.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Click to open popup",
+    "default_icon" : "entrata.png"
+  },
+  "permissions" :["activeTab","storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./static/js/main.7669e177.js"]
+    }
+  ]
+}
